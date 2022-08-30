@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
 
-        <h1>{{  $profile->toJson() }}</h1>
+        <h1>{{  $graph_user->getSurname() }}</h1>
 
     </div>
 

@@ -29,9 +29,9 @@ class AppAzure extends Azure
         #    'name' => $graph_user->getGivenName() . ' ' . $graph_user->getSurname(),
         #]);
 
-        #Auth::login($user, true);
+        Auth::login($user, true);
 
-        return parent::success($request, $access_token, $refresh_token, $profile);
+        return parent::success($request, $access_token, $refresh_token, $profile, $graph_user);
         #return redirect()->route('dashboard', [$request, $access_token, $refresh_token, $profile]);
     }
 }
