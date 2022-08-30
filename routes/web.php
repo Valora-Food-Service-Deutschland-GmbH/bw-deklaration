@@ -35,14 +35,17 @@ Route::get('/logout/azure', '\App\Http\Middleware\AppAzure@azurelogout')
  */
 Route::get('/', function () {
     error_log("INFO: get /");
-    return view('tasks', [
-        'tasks' => Task::orderBy('created_at', 'asc')->get()
-    ]);
-})->middleware('AppAzure');
+    return view('login');
+});
 
+Route::get('/login', function () {
+    error_log("INFO: get /");
+    return view('login');
+});
 
-
-
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
 
 /**
     * Show Task Dashboard
