@@ -20,10 +20,12 @@ use Illuminate\Http\Request;
  * Azure Login Routes
  */
 
-Route::get('/login/azure', '\RootInc\LaravelAzureMiddleware\Azure@azure')
+Route::get('/login/azure', '\App\Http\Middleware\AppAzure@azure')
     ->name('azure.login');
-Route::get('/login/azurecallback', '\RootInc\LaravelAzureMiddleware\Azure@azurecallback')
+Route::get('/login/azurecallback', '\App\Http\Middleware\AppAzure@azurecallback')
     ->name('azure.callback');
+Route::get('/logout/azure', '\App\Http\Middleware\AppAzure@azurelogout')
+    ->name('azure.logout');
 
 /**
     * Show Task Dashboard
