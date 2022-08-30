@@ -33,13 +33,9 @@ Route::get('/logout/azure', '\App\Http\Middleware\AppAzure@azurelogout')
 /**
  * Test Azure Login
  */
-Route::get('/', function () {
-    error_log("INFO: get /");
-    return view('login');
-});
+Route::redirect('/', '/login');
 
 Route::get('/login', function () {
-    error_log("INFO: get /");
     return view('login');
 });
 
