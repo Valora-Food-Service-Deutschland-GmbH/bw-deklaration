@@ -41,9 +41,7 @@
                     <div class="card-body">
                         <form action="" method="">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Anmelden mit Office 365
-                                </button>
+                                <a href="{{ route('azure.login') }}" class="btn btn-primary" tabindex="-1" role="button" >Anmelden mit Office 365</a>
                             </div>
                     </div>
                     </form>

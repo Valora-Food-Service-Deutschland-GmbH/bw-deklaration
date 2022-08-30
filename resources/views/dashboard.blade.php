@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
 
-        <h1>{{  $profile-> }}</h1>
+        <h1>{{  $profile->toJson() }}</h1>
 
     </div>
 
