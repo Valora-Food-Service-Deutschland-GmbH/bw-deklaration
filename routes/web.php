@@ -38,7 +38,7 @@ Route::get('/', function () {
     return view('tasks', [
         'tasks' => Task::orderBy('created_at', 'asc')->get()
     ]);
-})->middleware('azure');
+})->middleware('AppAzure');
 
 
 
