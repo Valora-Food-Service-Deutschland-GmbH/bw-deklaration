@@ -17,6 +17,15 @@ use App\Models\Task;
 use Illuminate\Http\Request;
 
 /**
+ * Azure Login Routes
+ */
+
+Route::get('/login/azure', '\RootInc\LaravelAzureMiddleware\Azure@azure')
+    ->name('azure.login');
+Route::get('/login/azurecallback', '\RootInc\LaravelAzureMiddleware\Azure@azurecallback')
+    ->name('azure.callback');
+
+/**
     * Show Task Dashboard
     */
 Route::get('/', function () {
