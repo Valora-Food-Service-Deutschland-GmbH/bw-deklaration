@@ -41,5 +41,8 @@ Route::get('/login', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware('AzureApp');
+});
 
+Route::get('/bla', function () {
+    return view('bla');
+});
