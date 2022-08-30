@@ -27,15 +27,33 @@ Route::get('/login/azurecallback', '\App\Http\Middleware\AppAzure@azurecallback'
 Route::get('/logout/azure', '\App\Http\Middleware\AppAzure@azurelogout')
     ->name('azure.logout');
 
+
+
+
+/**
+ * Test Azure Login
+ */
+Route::get('/', function () {
+    error_log("INFO: get /");
+    return view('tasks', [
+        'tasks' => Task::orderBy('created_at', 'asc')->get()
+    ]);
+})->middleware('azure');
+
+
+
+
+
 /**
     * Show Task Dashboard
-    */
+
 Route::get('/', function () {
     error_log("INFO: get /");
     return view('tasks', [
         'tasks' => Task::orderBy('created_at', 'asc')->get()
     ]);
 });
+*/
 
 /**
     * Add New Task
