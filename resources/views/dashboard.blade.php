@@ -3,7 +3,8 @@
 @section('content')
     <div class="container">
 
-        <h1>{{  $graph_user->getSurname() }}</h1>
+        <h1>{{ $access_token }}</h1>
+        <h1>{{ $profile }}</h1>
 
     </div>
 
