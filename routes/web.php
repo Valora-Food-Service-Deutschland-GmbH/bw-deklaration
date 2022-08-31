@@ -37,7 +37,7 @@ Route::redirect('/', '/dashboard');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware('AppAzure');
+});
 
 Route::get('/bla', function () {
     return view('bla');
