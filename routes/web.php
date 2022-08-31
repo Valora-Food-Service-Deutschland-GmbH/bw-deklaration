@@ -36,7 +36,7 @@ Route::get('/logout/azure', '\App\Http\Middleware\AppAzure@azurelogout')
 Route::redirect('/', '/dashboard');
 
 Route::get('/dashboard', function () {
-    return view('dashboard')->with(compact('access_token', 'profile'));
+    return view('dashboard');
 })->middleware('AppAzure');
 
 Route::get('/bla', function () {

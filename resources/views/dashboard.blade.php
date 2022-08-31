@@ -3,13 +3,12 @@
 @section('content')
     <div class="container">
 
-        <h1>{{ $access_token }}</h1>
-        <h1>{{ $profile }}</h1>
+        <h1>Test Tabelle</h1>
 
     </div>
 
     <div class="container">
-        <table class="table table-striped">
+        <table class="table table-striped" id="#Artikel">
             <thead>
             <tr>
                 <th scope="col">Artikelbezeichnung</th>
