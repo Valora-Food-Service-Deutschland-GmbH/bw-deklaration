@@ -16,12 +16,12 @@ class AppAzure extends Azure
 {
     protected function success(Request $request, $access_token, $refresh_token, $profile)
     {
-        $graph = new Graph();
-        $graph->setAccessToken($access_token);
+        #$graph = new Graph();
+        #$graph->setAccessToken($access_token);
 
-        $graph_user = $graph->createRequest("GET", "/me")
-            ->setReturnType(Model\User::class)
-            ->execute();
+        #$graph_user = $graph->createRequest("GET", "/me")
+        #    ->setReturnType(Model\User::class)
+        #    ->execute();
 
         $email = strtolower($graph_user->getUserPrincipalName());
 
