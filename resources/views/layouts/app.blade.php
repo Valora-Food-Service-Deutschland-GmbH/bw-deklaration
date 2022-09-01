@@ -30,7 +30,7 @@
 </head>
 <body id="app-layout">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Valora</a>
+    <a class="navbar-brand" href="{{ public_path('img\valora.png') }}">Valora</a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">

@@ -14,7 +14,7 @@ class CreateArtikelTable extends Migration
     public function up()
     {
         Schema::create('_artikel', function (Blueprint $table) {
-            $table->collation('latin1_german1_ci');
+            #$table->collation('latin1_german1_ci');
             $table->id();
             $table->string('address',255)->nullable('true')->default(NULL);
             $table->text('ingredients')->nullable('true')->default(NULL);

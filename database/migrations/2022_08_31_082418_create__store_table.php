@@ -14,7 +14,7 @@ class CreateStoreTable extends Migration
     public function up()
     {
         Schema::create('_store', function (Blueprint $table) {
-            $table->collation('latin1_german1_ci');
+            #$table->collation('latin1_german1_ci');
             $table->id();
             $table->integer('store_id');
             $table->
