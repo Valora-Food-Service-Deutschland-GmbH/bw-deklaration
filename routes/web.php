@@ -43,7 +43,24 @@ Route::get('/bla', function () {
     return view('bla');
 });
 
-Route::get('/users', [
-    'uses' => 'UserController@index',
-    'as' => 'user-list'
-]);
+Route::controller(UserController::class)->group(function () {
+    Route::get('/user', 'index');
+    Route::get('/user/{id}','show');
+    Route::get('user/{id}/edit','edit');
+    Route::post('/user/{id}/update','update');
+    Route::get('/user/create', 'create');
+    Route::post('/user/store','store');
+    Route::post('/user/{id}/destroy,','destroy');
+});
+
+Route::controller(ArtikelController::class)->group(function () {
+    Route::get('/artikel', 'index');
+    Route::get('/artikel/{id}','show');
+    Route::get('/artikel/{id}/edit','edit');
+    Route::post('/artikel/{id}/update','update');
+    Route::get('/artikel/create', 'create');
+    Route::post('/artikel/store','store');
+    Route::post('/artikel/{id}/destroy,','destroy');
+    Route::get('/artikel/makelabel','makelabel');
+    Route::post('/artikel/download','download');
+});
