@@ -34,7 +34,7 @@ class Artikel extends Controller
                         ->make(true);
                 }
 
-                return view('artikel-list');
+                return view('Artikel.index');
             }
         }
     }
@@ -46,7 +46,7 @@ class Artikel extends Controller
      */
     public function create()
     {
-        //
+        return view('Artikel.create');
     }
 
     /**
@@ -57,7 +57,7 @@ class Artikel extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('Artikel.index');
     }
 
     /**
@@ -68,7 +68,7 @@ class Artikel extends Controller
      */
     public function show($id)
     {
-        //
+        return view('Artikel.index');
     }
 
     /**
@@ -79,7 +79,7 @@ class Artikel extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('Artikel.edit');
     }
 
     /**
@@ -91,7 +91,7 @@ class Artikel extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view('Artikel.index');
     }
 
     /**
@@ -102,13 +102,13 @@ class Artikel extends Controller
      */
     public function destroy($id)
     {
-        //
+        return view('Artikel.index');
     }
 
     public function download()
     {
         $client = Onedrive::client(
-            $config['ONEDRIVE_CLIENT_ID'],
+            env('AZURE_CLIENT_ID', ''),
             [
                 // Restore the previous state while instantiating this client to proceed
                 // in obtaining an access token.
@@ -117,7 +117,7 @@ class Artikel extends Controller
         );
 
         // Obtain the token using the code received by the OneDrive API.
-        $client->obtainAccessToken($config['ONEDRIVE_CLIENT_SECRET'], $_GET['code']);
+        $client->obtainAccessToken(env('AZURE_CLIENT_SECRET', ''), $_GET['code']);
 
         // Persist the OneDrive client' state for next API requests.
         $_SESSION['onedrive.client.state'] = $client->getState();
@@ -128,5 +128,12 @@ class Artikel extends Controller
         // => Hello World!
 
         $file->delete();
+
+        return view('artikel.index');
+    }
+
+    public function makelabel()
+    {
+        return view('artikel.index');
     }
 }
