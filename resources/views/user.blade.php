@@ -13,7 +13,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
-                <th scope="col">Artikelbezeichnung BW</th>
+                <th scope="col">email</th>
                 <th scope="col">Funktionen</th>
             </tr>
             </thead>
@@ -38,8 +38,8 @@
                         name: 'email'
                     },
                     {
-                        data: 'mobile',
-                        name: 'mobile'
+                        data: 'created_at',
+                        name: 'created_at'
                     },
                     {
                         data: 'action',
