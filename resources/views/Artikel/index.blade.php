@@ -18,13 +18,16 @@
             </tr>
             </thead>
         </table>
+        <a href="{{ route('artikel/') }}" class="btn btn-primary btn-lg">
+            <span class="glyphicon glyphicon-cloud-upload"></span> Auf mein OneDrive hochladen
+        </a>
     </div>
     <script>
         $(document).ready( function () {
             $('#Artikel').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('artikel') }}",
+                ajax: "{{ route('/artikel/download') }}",
                 columns: [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex'
