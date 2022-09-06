@@ -23,7 +23,7 @@ class AppAzure extends Azure
         #    ->setReturnType(Model\User::class)
         #    ->execute();
 
-        $email = strtolower($graph_user->getUserPrincipalName());
+        #$email = strtolower($graph_user->getUserPrincipalName());
 
         #$user = User::updateOrCreate(['email' => $email], [
         #    'name' => $graph_user->getGivenName() . ' ' . $graph_user->getSurname(),
