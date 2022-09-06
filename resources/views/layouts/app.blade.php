@@ -59,4 +59,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
+<footer class="text-center text-white fixed-bottom" style="background-color: #21081a;">
+    <!-- Grid container -->
+    <div class="container p-4"></div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright: Valora Food Service Deutschland GmbH
+    </div>
+    <!-- Copyright -->
+</footer>
 </html>
