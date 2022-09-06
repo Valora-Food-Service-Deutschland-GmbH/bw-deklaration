@@ -30,7 +30,7 @@
 </head>
 <body id="app-layout">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://www.valora.com">Valora
+    <a class="navbar-brand" href="https://www.valora.com">
         <img class="" src="\img\valora.png ">
     </a>
 </nav>
