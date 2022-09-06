@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'vfsde-infoportal'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CFADD09EA58E4E5284588BFE70B277CF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CD0EC155311A4A7EB044C2D0BC428BB7 }}
           package: .
