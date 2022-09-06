@@ -42,3 +42,8 @@ Route::get('/dashboard', function () {
 Route::get('/bla', function () {
     return view('bla');
 });
+
+Route::get('/users', [
+    'uses' => 'UserController@index',
+    'as' => 'employee-list'
+]);
