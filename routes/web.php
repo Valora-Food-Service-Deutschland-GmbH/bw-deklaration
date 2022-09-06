@@ -45,5 +45,5 @@ Route::get('/bla', function () {
 
 Route::get('/users', [
     'uses' => 'UserController@index',
-    'as' => 'employee-list'
+    'as' => 'user-list'
 ]);

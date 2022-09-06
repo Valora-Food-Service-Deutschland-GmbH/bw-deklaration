@@ -11,8 +11,8 @@
         <table class="table table-striped table-bordered table-hover" id="#Artikel">
             <thead>
             <tr>
-                <th scope="col">Artikelbezeichnung</th>
-                <th scope="col">Artikelnummer</th>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
                 <th scope="col">Artikelbezeichnung BW</th>
                 <th scope="col">Funktionen</th>
             </tr>

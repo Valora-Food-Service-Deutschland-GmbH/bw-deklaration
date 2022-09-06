@@ -34,7 +34,7 @@ class UserController extends Controller
                     ->make(true);
             }
 
-            return view('user');
+            return view('user-list');
         }
     }
 
