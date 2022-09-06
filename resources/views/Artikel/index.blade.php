@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
 
-        <h1>User</h1>
+        <h1>Artikel</h1>
 
     </div>
 
@@ -24,7 +24,7 @@
             $('#Artikel').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('user-list') }}",
+                ajax: "{{ route('artikel') }}",
                 columns: [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex'
