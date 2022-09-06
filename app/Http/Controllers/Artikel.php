@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Krizalys\Onedrive\Onedrive;
+use DataTables;
 
 class Artikel extends Controller
 {
