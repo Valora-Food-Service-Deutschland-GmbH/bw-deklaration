@@ -8,7 +8,7 @@
     </div>
 
     <div class="container">
-        <table class="table table-striped" id="#Artikel">
+        <table class="table table-striped table-bordered table-hover" id="#Artikel">
             <thead>
             <tr>
                 <th scope="col">Artikelbezeichnung</th>
