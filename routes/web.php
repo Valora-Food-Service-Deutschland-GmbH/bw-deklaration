@@ -28,8 +28,6 @@ Route::get('/logout/azure', '\App\Http\Middleware\AppAzure@azurelogout')
     ->name('azure.logout');
 
 
-
-
 /**
  * Test Azure Login
  */
@@ -44,23 +42,23 @@ Route::get('/bla', function () {
 });
 
 Route::controller(UserController::class)->group(function () {
-    Route::get('/user', 'index');
-    Route::get('/user/{id}','show');
-    Route::get('user/{id}/edit','edit');
-    Route::post('/user/{id}/update','update');
-    Route::get('/user/create', 'create');
-    Route::post('/user/store','store');
-    Route::post('/user/{id}/destroy,','destroy');
+    Route::get('/user', 'index')->name('user.index');
+    Route::get('/user/{id}','show')->name('user.show');
+    Route::get('user/{id}/edit','edit')->name('user.edit');
+    Route::post('/user/{id}/update','update')->name('user.update');
+    Route::get('/user/create', 'create')->name('user.create');
+    Route::post('/user/store','store')->name('user.store');
+    Route::post('/user/{id}/destroy,','destroy')->name('user.destroy');
 });
 
 Route::controller(ArtikelController::class)->group(function () {
-    Route::get('/artikel', 'index');
-    Route::get('/artikel/{id}','show');
-    Route::get('/artikel/{id}/edit','edit');
-    Route::post('/artikel/{id}/update','update');
-    Route::get('/artikel/create', 'create');
-    Route::post('/artikel/store','store');
-    Route::post('/artikel/{id}/destroy,','destroy');
-    Route::get('/artikel/makelabel','makelabel');
-    Route::post('/artikel/download','download');
+    Route::get('/artikel', 'index')->name('artikel.index');
+    Route::get('/artikel/{id}','show')->name('artikel.show');
+    Route::get('/artikel/{id}/edit','edit')->name('artikel.edit');
+    Route::post('/artikel/{id}/update','update')->name('artikel.update');
+    Route::get('/artikel/create', 'create')->name('artikel.create');
+    Route::post('/artikel/store','store')->name('artikel.store');
+    Route::post('/artikel/{id}/destroy,','destroy')->name('artikel.destroy');
+    Route::get('/artikel/makelabel','makelabel')->name('artikel.makelabel');
+    Route::post('/artikel/download','download')->name('artikel.download');
 });
