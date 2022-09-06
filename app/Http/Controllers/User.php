@@ -9,7 +9,7 @@ use DataTables;
 class UserController extends Controller
 {
     /**
-     * Methods for Article Views
+     * Methods for User Views
      *
      */
 
