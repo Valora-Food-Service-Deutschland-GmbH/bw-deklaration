@@ -8,6 +8,7 @@
         "php": "^7.3|^8.0",
         "filp/whoops": "^2.14",
         "fruitcake/laravel-cors": "^2.0",
+        "graham-campbell/exceptions": "^16.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "krizalys/onedrive-php-sdk": "^3.1.0",
         "laravel/framework": "^8.75",

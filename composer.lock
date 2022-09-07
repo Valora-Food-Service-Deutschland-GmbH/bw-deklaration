@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bce0f274cf2688e1c14a92e72dad8256",
+    "content-hash": "820a32200c823640a1693d30723d42da",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -689,6 +689,93 @@
                 }
             ],
             "time": "2022-02-23T14:25:13+00:00"
+        },
+        {
+            "name": "graham-campbell/exceptions",
+            "version": "v16.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
+                "reference": "930ccaed413ae3e74533c06dfc1fee9de3bab0fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/930ccaed413ae3e74533c06dfc1fee9de3bab0fa",
+                "reference": "930ccaed413ae3e74533c06dfc1fee9de3bab0fa",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.75 || ^9.0",
+                "illuminate/support": "^8.75 || ^9.0",
+                "php": "^7.4.15 || ^8.0.2",
+                "psr/log": "^1.1 || ^2.0 || ^3.0",
+                "symfony/console": "^5.4 || ^6.0",
+                "symfony/error-handler": "^5.4 || ^6.0",
+                "symfony/http-foundation": "^5.4 || ^6.0"
+            },
+            "require-dev": {
+                "filp/whoops": "^2.7.1",
+                "graham-campbell/analyzer": "^3.1",
+                "graham-campbell/testbench": "^5.7",
+                "mockery/mockery": "^1.5",
+                "phpunit/phpunit": "^9.5"
+            },
+            "suggest": {
+                "filp/whoops": "Enables use of the debug displayer."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GrahamCampbell\\Exceptions\\ExceptionsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\Exceptions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                }
+            ],
+            "description": "Provides A Powerful Error Response System For Both Development And Production",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Laravel Exceptions",
+                "Laravel-Exceptions",
+                "error",
+                "errors",
+                "exception",
+                "exceptions",
+                "framework",
+                "laravel",
+                "whoops"
+            ],
+            "support": {
+                "issues": "https://github.com/GrahamCampbell/Laravel-Exceptions/issues",
+                "source": "https://github.com/GrahamCampbell/Laravel-Exceptions/tree/v16.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/graham-campbell/exceptions",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-05-30T22:23:08+00:00"
         },
         {
             "name": "graham-campbell/result-type",
