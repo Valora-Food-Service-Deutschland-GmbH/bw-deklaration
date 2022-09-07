@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use http\Env\Response;
 use Illuminate\Http\Request;
 use Krizalys\Onedrive\Onedrive;
 use DataTables;
@@ -34,8 +35,8 @@ class Artikel extends Controller
                         ->rawColumns(['action'])
                         ->make(true);
                 }
-
-                return view('Artikel.index');
+                $response = new \Illuminate\Http\Response(view('Artikel.index'));
+                return $response;
             }
         }
     }
