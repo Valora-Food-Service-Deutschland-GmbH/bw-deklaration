@@ -14,7 +14,7 @@
         "laravel/tinker": "^2.5",
         "rootinc/laravel-azure-middleware": "^0.9.10",
         "yajra/laravel-datatables-oracle": "^9.0",
-        "filp/whoops": "~1.0",
+        "filp/whoops": "~1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
