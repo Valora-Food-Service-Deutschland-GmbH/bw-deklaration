@@ -38,6 +38,12 @@ Route::get('/dashboard', function () {
 });
 
 Route::resources([
-    'artikel' => \App\Http\Controllers\Artikel::class,
+    'artikel' => \App\Http\Controllers\ArtikelController::class,
     'users' => \App\Http\Controllers\UserController::class,
 ]);
+
+Route::get('/artikel/download', '\App\Http\Controllers\ArtikelController@download')
+->name('artikel.download');
+
+Route::get('/artikel/download', '\App\Http\Controllers\ArtikelController@makelabel')
+    ->name('artikel.makelabel');

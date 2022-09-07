@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Krizalys\Onedrive\Onedrive;
 use DataTables;
 
-class Artikel extends Controller
+class ArtikelController extends Controller
 {
     /**
      * Methods for Article Views
@@ -25,7 +25,7 @@ class Artikel extends Controller
         {
             {
                 if ($request->ajax()) {
-                    $data = Artikel::latest()->get();
+                    $data = ArtikelController::latest()->get();
                     return Datatables::of($data)
                         ->addIndexColumn()
                         ->addColumn('action', function($row){
