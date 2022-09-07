@@ -25,7 +25,7 @@ class ArtikelController extends Controller
         {
             {
                 if ($request->ajax()) {
-                    $data = ArtikelController::latest()->get();
+                    $data = \App\Models\Artikel::latest()->get();
                     return Datatables::of($data)
                         ->addIndexColumn()
                         ->addColumn('action', function($row){
