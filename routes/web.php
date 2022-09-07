@@ -45,5 +45,5 @@ Route::resources([
 Route::get('/artikel/download', '\App\Http\Controllers\ArtikelController@download')
 ->name('artikel.download');
 
-Route::get('/artikel/download', '\App\Http\Controllers\ArtikelController@makelabel')
+Route::get('/artikel/makelabel', '\App\Http\Controllers\ArtikelController@makelabel')
     ->name('artikel.makelabel');
