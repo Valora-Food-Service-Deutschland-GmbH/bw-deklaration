@@ -36,5 +36,6 @@ Route::get('/dashboard', function () {
 });
 
 
-Route::resource('artikel', ArtikelController::class);
+Route::get('/artikel', '\App\Http\Controllers\ArtikelController@index')
+    ->name('artikel.index');
 
