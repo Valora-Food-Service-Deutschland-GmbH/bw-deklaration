@@ -29,14 +29,12 @@ Route::get('/logout/azure', '\App\Http\Middleware\AppAzure@azurelogout')
     ->name('azure.logout');
 
 
-/**
- * Test Azure Login
- */
 Route::redirect('/', '/dashboard');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
 
 Route::resource('artikel', ArtikelController::class);
 
