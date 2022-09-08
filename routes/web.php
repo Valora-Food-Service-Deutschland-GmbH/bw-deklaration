@@ -37,13 +37,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::resources([
-    'artikel' => \App\Http\Controllers\ArtikelController::class,
-    'users' => \App\Http\Controllers\UserController::class,
+Route::get('/artikel', [
+    'as' => 'artikel.index',
+    'uses' => 'ArtikelController@index'
 ]);
 
-Route::get('/artikel/download', '\App\Http\Controllers\ArtikelController@download')
-->name('artikel.download');
-
-Route::get('/artikel/makelabel', '\App\Http\Controllers\ArtikelController@makelabel')
-    ->name('artikel.makelabel');
+Route::fallback(function () {
+    //
+});

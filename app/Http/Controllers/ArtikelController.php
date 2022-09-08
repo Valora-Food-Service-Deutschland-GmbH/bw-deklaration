@@ -25,7 +25,7 @@ class ArtikelController extends Controller
     {
         {
             {
-                if ($request->ajax()) {
+                if (request->ajax()) {
                     $ajax = datatables()->eloquent(Artikel::query())->toJson();
                     return new \Illuminate\Http\Response($ajax);
                 }
