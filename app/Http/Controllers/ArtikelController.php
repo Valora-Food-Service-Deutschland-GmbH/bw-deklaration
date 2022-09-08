@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
 use http\Env\Response;
 use Illuminate\Http\Request;
 use Krizalys\Onedrive\Onedrive;
-use DataTables;
+use Yajra\Datatables\Facades\Datatables;
 
 class ArtikelController extends Controller
 {
@@ -25,18 +26,10 @@ class ArtikelController extends Controller
         {
             {
                 if ($request->ajax()) {
-                    $data = \App\Models\Artikel::latest()->get();
-                    return Datatables::of($data)
-                        ->addIndexColumn()
-                        ->addColumn('action', function($row){
-                            $btn = '<a href="javascript:void(0)" class="edit btn btn-primary">Edit</a> <a href="javascript:void(0)" class="delete btn btn-danger">Delete</a>';
-                            return $btn;
-                        })
-                        ->rawColumns(['action'])
-                        ->make(true);
+                    $ajax = datatables()->eloquent(Artikel::query())->toJson();
+                    return new \Illuminate\Http\Response($ajax);
                 }
-                $response = new \Illuminate\Http\Response(view('Artikel.index'));
-                return $response;
+                return new \Illuminate\Http\Response(view('Artikel.index'));
             }
         }
     }
