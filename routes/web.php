@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,10 +38,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/artikel', [
-    'as' => 'artikel.index',
-    'uses' => 'ArtikelController@index'
-]);
+Route::resource('artikel', ArtikelController::class);
 
 Route::fallback(function () {
     //
