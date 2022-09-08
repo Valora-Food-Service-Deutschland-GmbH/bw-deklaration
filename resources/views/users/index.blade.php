@@ -24,7 +24,7 @@
             $('#Users').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('users') }}",
+                ajax: '/users',
                 columns: [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex'
