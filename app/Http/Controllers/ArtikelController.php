@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artikel;
-use http\Env\Response;
+use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Krizalys\Onedrive\Onedrive;
 use Yajra\Datatables\Facades\Datatables;
@@ -23,16 +24,15 @@ class ArtikelController extends Controller
      */
     public function index(Request $request)
     {
-        {
-            {
+
                 if ($request->ajax()) {
                     $ajax = datatables()->eloquent(Artikel::query())->toJson();
-                    return new \Illuminate\Http\Response($ajax);
+                    return $ajax;
                 }
-                return new \Illuminate\Http\Response(view('Artikel.index'));
-            }
-        }
+                return view('Artikel.index');
+
     }
+
 
     /**
      * Show the form for creating a new resource.

@@ -38,6 +38,3 @@ Route::get('/dashboard', function () {
 
 Route::resource('artikel', ArtikelController::class);
 
-Route::fallback(function () {
-    //
-});
