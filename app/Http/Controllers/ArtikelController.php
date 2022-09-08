@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Artikel;
 use App\Http\Controllers\Controller;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Krizalys\Onedrive\Onedrive;
 use Yajra\Datatables\Facades\Datatables;
@@ -24,13 +23,21 @@ class ArtikelController extends Controller
      */
     public function index(Request $request)
     {
+        if ($request->ajax()) {
+            $All_Artikel= Artikel::select('*');
+            return Datatables::of($All_Artikel)
+                ->addIndexColumn()
+                ->addColumn('action', function($row){
 
-                if ($request->ajax()) {
-                    $ajax = datatables()->eloquent(Artikel::query())->toJson();
-                    return $ajax;
-                }
-                return view('Artikel.index');
+                    $btn = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm">View</a>';
 
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+
+        return view('Artikel.index');
     }
 
 
