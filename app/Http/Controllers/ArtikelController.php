@@ -48,7 +48,7 @@ class ArtikelController extends Controller
      */
     public function create()
     {
-        return view('Artikel.create');
+
     }
 
     /**
@@ -59,7 +59,7 @@ class ArtikelController extends Controller
      */
     public function store(Request $request)
     {
-        return view('Artikel.index');
+
     }
 
     /**
@@ -70,7 +70,7 @@ class ArtikelController extends Controller
      */
     public function show($id)
     {
-        return view('Artikel.index');
+
     }
 
     /**
@@ -81,7 +81,7 @@ class ArtikelController extends Controller
      */
     public function edit($id)
     {
-        return view('Artikel.edit');
+
     }
 
     /**
@@ -93,7 +93,7 @@ class ArtikelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return view('Artikel.index');
+
     }
 
     /**
@@ -104,11 +104,12 @@ class ArtikelController extends Controller
      */
     public function destroy($id)
     {
-        return view('Artikel.index');
+
     }
 
     public function download()
     {
+        /**
         $client = Onedrive::client(
             env('AZURE_CLIENT_ID', ''),
             [
@@ -132,10 +133,11 @@ class ArtikelController extends Controller
         $file->delete();
 
         return view('artikel.index');
+         */
     }
 
     public function makelabel()
     {
-        return view('artikel.index');
+
     }
 }
