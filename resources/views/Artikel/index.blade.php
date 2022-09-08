@@ -27,7 +27,7 @@
             $('#Artikel').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('artikel.index') }}",
+                ajax: '/artikel',
                 columns: [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex'
