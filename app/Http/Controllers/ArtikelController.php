@@ -23,6 +23,11 @@ class ArtikelController extends Controller
      */
     public function index(Request $request)
     {
+        return view('Artikel.index');
+    }
+
+    public function ajax(Request $request)
+    {
         if ($request->ajax()) {
             $All_Artikel= Artikel::select('*');
             return Datatables::of($All_Artikel)
@@ -36,10 +41,10 @@ class ArtikelController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
         }
-
-        return view('Artikel.index');
+        else {
+            abort(404);
+        }
     }
-
 
     /**
      * Show the form for creating a new resource.

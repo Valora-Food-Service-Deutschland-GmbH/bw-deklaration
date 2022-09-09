@@ -28,8 +28,8 @@
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: 'https://deklaration.valora.shop/artikel',
-                    method: 'GET'
+                    url: 'https://deklaration.valora.shop/artikel/ajax',
+                    method: 'POST'
                 },
                 columns: [{
                     data: 'DT_RowIndex',
