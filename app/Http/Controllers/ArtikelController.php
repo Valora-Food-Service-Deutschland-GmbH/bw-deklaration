@@ -26,11 +26,10 @@ class ArtikelController extends Controller
         return view('Artikel.index');
     }
 
-    public function ajax(Request $request)
+    public function ajax()
     {
-        if ($request->ajax()) {
             $All_Artikel= Artikel::select('*');
-            return Datatables::of($All_Artikel)
+            $dt = Datatables::of($All_Artikel)
                 ->addIndexColumn()
                 ->addColumn('action', function($row){
 
@@ -40,10 +39,8 @@ class ArtikelController extends Controller
                 })
                 ->rawColumns(['action'])
                 ->make(true);
-        }
-        else {
-            abort(404);
-        }
+            return $dt->asJson();
+
     }
 
     /**
