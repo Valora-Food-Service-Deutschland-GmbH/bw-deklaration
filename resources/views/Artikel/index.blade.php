@@ -25,36 +25,37 @@
     <script>
         $(document).ready( function () {
             $('#Artikel').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: {
-                    url: '/artikel/ajax',
-                    method: 'GET',
-                    error: function (jqXHR, testStatus, errorThrown){
+                'processing': 'true',
+                'serverSide': 'true',
+                'ajax': {
+                    'url': '/artikel/ajax',
+                    'method': 'GET',
+                    'dataSrc': 'data',
+                    'error': function (jqXHR, testStatus, errorThrown){
                         $('#Artikel').Datatable().clear().draw();
                     }
                 },
-                columns: [{
-                    data: 'DT_RowIndex',
-                    name: 'DT_RowIndex'
+                'columns': [{
+                    'data': 'DT_RowIndex',
+                    'name': 'DT_RowIndex'
                 },
                     {
-                        data: 'name',
-                        name: 'name'
+                        'data': 'name',
+                        'name': 'name'
                     },
                     {
-                        data: 'email',
-                        name: 'email'
+                        'data': 'email',
+                        'name': 'email'
                     },
                     {
-                        data: 'created_at',
-                        name: 'created_at'
+                        'data': 'created_at',
+                        'name': 'created_at'
                     },
                     {
-                        data: 'action',
-                        name: 'action',
-                        orderable: true,
-                        searchable: true
+                        'data': 'action',
+                        'name': 'action',
+                        'orderable': true,
+                        'searchable': true
                     },
                 ]
             });
