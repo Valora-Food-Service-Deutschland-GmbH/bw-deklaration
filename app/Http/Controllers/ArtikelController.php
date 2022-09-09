@@ -6,7 +6,9 @@ use App\Models\Artikel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Krizalys\Onedrive\Onedrive;
-use yajra\Datatables\Facades\Datatables;
+use Yajra\DataTables\DataTables;
+
+#use yajra\Datatables\Facades\Datatables;
 
 class ArtikelController extends Controller
 {
@@ -24,6 +26,7 @@ class ArtikelController extends Controller
     public function index(Request $request)
     {
         return view('Artikel.index');
+
     }
 
     public function ajax()
