@@ -27,7 +27,10 @@
             $('#Artikel').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: '/artikel',
+                ajax: {
+                    url: 'https://deklaration.valora.shop/artikel',
+                    method: 'GET'
+                },
                 columns: [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex'
