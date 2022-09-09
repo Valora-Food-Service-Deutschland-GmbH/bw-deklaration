@@ -6,7 +6,7 @@ use App\Models\Artikel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Krizalys\Onedrive\Onedrive;
-use Yajra\Datatables\Facades\Datatables;
+use yajra\Datatables\Facades\Datatables;
 
 class ArtikelController extends Controller
 {
