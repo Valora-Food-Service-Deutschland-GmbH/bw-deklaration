@@ -39,7 +39,12 @@ class ArtikelController extends Controller
                 })
                 ->rawColumns(['action'])
                 ->make(true);
-            return $dt->asJson();
+            if (!$dt->isEmpty()) {
+                return $dt->asJson();
+            }
+            else{
+                return view('dashoard')->with($All_Artikel);
+            }
 
     }
 
