@@ -28,8 +28,11 @@
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: 'https://deklaration.valora.shop/artikel/ajax',
-                    method: 'POST'
+                    url: '/artikel/ajax',
+                    method: 'GET',
+                    error: function (jqXHR, testStatus, errorThrown){
+                        $('#Artikel').Datatable().clear().draw();
+                    }
                 },
                 columns: [{
                     data: 'DT_RowIndex',

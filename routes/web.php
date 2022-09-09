@@ -39,5 +39,5 @@ Route::get('/dashboard', function () {
 Route::get('/artikel', '\App\Http\Controllers\ArtikelController@index')
     ->name('artikel.index');
 
-Route::post('/artikel/ajax', '\App\Http\Controllers\ArtikelController@ajax')
+Route::get('/artikel/ajax', '\App\Http\Controllers\ArtikelController@ajax')
     ->name('artikel.ajax');
