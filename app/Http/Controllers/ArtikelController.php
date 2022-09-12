@@ -119,7 +119,7 @@ class ArtikelController extends Controller
 
     public function download()
     {
-        /**
+
         $client = Onedrive::client(
             env('AZURE_CLIENT_ID', ''),
             [
@@ -143,7 +143,7 @@ class ArtikelController extends Controller
         $file->delete();
 
         return view('artikel.index');
-         */
+
     }
 
     public function makelabel()
