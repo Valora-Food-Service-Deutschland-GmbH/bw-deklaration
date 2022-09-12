@@ -33,14 +33,6 @@ class ArtikelController extends Controller
     {
             $All_Artikel= Artikel::select('*');
             $dt = Datatables::of($All_Artikel)
-                ->addIndexColumn()
-                ->addColumn('action', function($row){
-
-                    $btn = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm">View</a>';
-
-                    return $btn;
-                })
-                ->rawColumns(['action'])
                 ->make(true);
             if (!$dt->isEmpty()) {
                 return $dt;
