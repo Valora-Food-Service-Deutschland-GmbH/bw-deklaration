@@ -42,5 +42,5 @@ Route::get('/artikel', '\App\Http\Controllers\ArtikelController@index')
 Route::get('/artikel/ajax', '\App\Http\Controllers\ArtikelController@ajax')
     ->name('artikel.ajax');
 
-Route::get('/artikel/ajax', '\App\Http\Controllers\ArtikelController@download')
+Route::get('/artikel/download', '\App\Http\Controllers\ArtikelController@download')
     ->name('artikel.download');
