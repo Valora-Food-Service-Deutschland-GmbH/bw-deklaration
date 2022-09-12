@@ -32,7 +32,7 @@
             </thead>
         </table>
         <a href="#" class="btn btn-primary btn-lg">
-            <span class="glyphicon glyphicon-cloud-upload"></span> Auf mein OneDrive hochladen
+            <i class="bi-cloud-arrow-up"></i> OneDrive
         </a>
     </div>
     <script>
