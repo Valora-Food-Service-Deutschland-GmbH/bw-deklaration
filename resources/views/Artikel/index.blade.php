@@ -18,7 +18,7 @@
             </tr>
             </thead>
         </table>
-        <a href="{{ route('artikel/') }}" class="btn btn-primary btn-lg">
+        <a href="#" class="btn btn-primary btn-lg">
             <span class="glyphicon glyphicon-cloud-upload"></span> Auf mein OneDrive hochladen
         </a>
     </div>
@@ -30,6 +30,9 @@
                 'ajax': {
                     'url': 'https://deklaration.valora.shop/artikel/ajax',
                     'method': 'GET',
+                    'error': function (jqXHR, testStatus, errorThrown){
+                        $('#Artikel').Datatable().clear().draw();
+                    }
 
                 },
 
