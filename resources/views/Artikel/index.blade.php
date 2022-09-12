@@ -47,9 +47,7 @@
                 'serverSide': 'false',
                 'ajax': {
                     'url': 'https://deklaration.valora.shop/artikel/ajax',
-                    'method': 'GET',
-                    'error': function (jqXHR, testStatus, errorThrown){
-                        $('#Artikel').Datatable().clear().draw();
+                    'method': 'GET'
                     }
 
                 },
