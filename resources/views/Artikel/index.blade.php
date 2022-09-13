@@ -47,7 +47,8 @@
                 'serverSide': 'true',
                 'ajax': {
                     'url': '../artikel/ajax',
-                    'method': 'GET'
+                    'method': 'GET',
+                    'dataSrc': 'data'
                     }
 
 
