@@ -43,8 +43,8 @@
         });
         $(document).ready( function () {
             $('#Artikel').DataTable({
-                'processing': 'false',
-                'serverSide': 'false',
+                'processing': 'true',
+                'serverSide': 'true',
                 'ajax': {
                     'url': '../artikel/ajax',
                     'method': 'GET'
