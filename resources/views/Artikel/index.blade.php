@@ -11,7 +11,7 @@
         <table class="table table-striped table-bordered table-hover" id="Artikel">
             <thead>
             <tr>
-                <th scope="col">ID</th>
+                <th scope="col">id</th>
                 <th scope="col">address</th>
                 <th scope="col">ingredients</th>
                 <th scope="col">fat</th>
@@ -27,7 +27,8 @@
                 <th scope="col">burn_kj</th>
                 <th scope="col">burn_ckal</th>
                 <th scope="col">weight</th>
-                <th scope="col">actions</th>
+                <th scope="col">created_at</th>
+                <th scope="col">updated_at</th>
             </tr>
             </thead>
         </table>
