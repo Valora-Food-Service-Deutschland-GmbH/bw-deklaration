@@ -46,9 +46,27 @@
             $('#Artikel').DataTable({
                 'processing': 'false',
                 'serverSide': 'false',
-                'ajax': {
-                    'url': '../artikel/ajax'
-                    }
+                'ajax': '../artikel/ajax',
+                'columns': [
+                    { 'data': 'id' },
+                    { 'data': 'address' },
+                    { 'data': 'ingredients' },
+                    { 'data': 'fat' },
+                    { 'data': 'fattyacids' },
+                    { 'data': 'carbs' },
+                    { 'data': 'sugar' },
+                    { 'data': 'protein' },
+                    { 'data': 'salt' },
+                    { 'data': 'traces' },
+                    { 'data': 'article_id' },
+                    { 'data': 'partner_id' },
+                    { 'data': 'store_id' },
+                    { 'data': 'burn_kj' },
+                    { 'data': 'burn_ckal' },
+                    { 'data': 'weight' },
+                    { 'data': 'created_at' },
+                    { 'data': 'updated_at' },
+                ],
 
 
 
