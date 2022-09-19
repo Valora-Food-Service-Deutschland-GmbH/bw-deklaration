@@ -62,7 +62,7 @@
                     { 'data': 'partner_id' },
                     { 'data': 'store_id' },
                     { 'data': 'burn_kj' },
-                    { 'data': 'burn_ckal' },
+                    { 'data': 'burn_kcal' },
                     { 'data': 'weight' },
                     { 'data': 'created_at' },
                     { 'data': 'updated_at' },
