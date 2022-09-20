@@ -13,12 +13,13 @@ class AlterUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->renameColumn('name', 'displayname');
-            $table->string('firstname')->nullable('true')->default(NULL);
-            $table->string('givenname')->nullable('true')->default(NULL);
-            $table->boolean('admin')->default('false');
-            $table->integer('partner_id')->nullable('true')->default(NULL);
+        Schema::table('artikel', function (Blueprint $table) {
+            $table->dropColumn('burn_kj');
+            $table->dropColumn('burn_kcal');
+            $table->dropColumn('weight');
+            $table->string('burn_kj')->nullable('true')->default(NULL);
+            $table->string('burn_kcal')->nullable('true')->default(NULL);
+            $table->string('weight')->nullable('true')->default(NULL);
         });
     }
 

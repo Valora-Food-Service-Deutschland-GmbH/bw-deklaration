@@ -16,10 +16,10 @@ class CreatePartnerTable extends Migration
         Schema::create('_partner', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('Firstname');
-            $table->string('Givenname');
-            $table->string('Displayname');
-            $table->integer('partner_id');
+            $table->string('Firstname')->nullable('true')->default(NULL);
+            $table->string('Givenname')->nullable('true')->default(NULL);
+            $table->string('Displayname')->nullable('true')->default(NULL);
+            $table->integer('partner_id')->nullable('true')->default(NULL);
         });
     }
 

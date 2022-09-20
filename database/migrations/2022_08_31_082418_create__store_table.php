@@ -15,9 +15,9 @@ class CreateStoreTable extends Migration
     {
         Schema::create('_store', function (Blueprint $table) {
             $table->id();
-            $table->integer('store_id');
-            $table->integer('partner_id');
-            $table->string('store_name');
+            $table->integer('store_id')->nullable('true');
+            $table->integer('partner_id')->nullable('true');
+            $table->string('store_name')->nullable('true');
             $table->timestamps();
         });
     }
