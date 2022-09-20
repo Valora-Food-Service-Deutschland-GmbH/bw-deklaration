@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table name="Grab" selectable="false" timestamp="">
+    <column name="Artikelbezeichnung" format="%s" />
+    <column name="Zutaten" format="%s" />
+    <column name="MHD" format="%f" />
+    <column name="Grundpreis" format="%s" />
+    <column name="Gewicht" format="%s" />
+    <column name="Preis" format="%s" />
+    <column name="Spuren" format="%s" />
+    <column name="Anschrift" format="%s" />
+    <column name="BW-ID" format="%f" />
+    <column name="Artikelnummer" format="%f" />
+    <column name="Artikelbezeichnung BW" format="%s" />
+    <column name="B-Wert Kcal" format="%s" />
+    <column name="B-Wert KJ" format="%f" />
+    <column name="Fett" format="%s" />
+    <column name="Fettsäuren" format="%s" />
+    <column name="K-Hydrate" format="%s" />
+    <column name="Zucker" format="%s" />
+    <column name="Eiweiss" format="%s" />
+    <column name="Salz" format="%s" />
+    <column name="Referenzmenge" format="%s" />
+    <column name="Lagerung" format="%s" />
+	<row id="1"><c>4 Schokomilchbrötchen</c><c>Weizenmehl, Wasser, Schokostücke 14% (Zucker, Kakaomasse, Kakaobutter, Traubenzucker, Emulgator: Soja-Lecithine), Hefe, Zucker, pflanzliches Fett (Raps), Salz, Traubenzucker, Molke 1%, Hühnervollei, Emulgatoren: E471, E472e, E481; Weizengluten, Antioxidantsmittel: E300, E306; Verdickungsmittel: E466; Milchpulver größer 0,1%, Enzyme, Aroma, Farbstoff.</c><c>0</c><c></c><c>260 g</c><c></c><c>kann Spuren von Eier, Milch, Soja, Weizen, enthalten</c><c>BackWerk Kamen, Inh. Jochen Müller, Weststr. 16, 59174 Kamen</c><c>7</c><c>11085</c><c>4 Schokomilchbrötchen</c><c>1200</c><c>0</c><c>10 g</c><c>0 g</c><c>40 g</c><c>0 g</c><c>8 g</c><c>0 g</c><c>Referenzmenge für einen durchschnittlichen Erwachsen (8400 kJ/2000 kcal)</c><c></c></row>
+	<row id="2"><c>4 Schokomilchbrötchen</c><c>Weizenmehl, Wasser, Schokostücke 14% (Zucker, Kakaomasse, Kakaobutter, Traubenzucker, Emulgator: Soja-Lecithine), Hefe, Zucker, pflanzliches Fett (Raps), Salz, Traubenzucker, Molke 1%, Hühnervollei, TEST-ZUTAT</c><c>0</c><c></c><c>260 g</c><c></c><c>kann Spuren von Eier, Milch, Soja, Weizen, enthalten</c><c>BackWerk Kamen, Inh. Jochen Müller, Weststr. 16, 59174 Kamen</c><c>7</c><c>11085</c><c>4 Schokomilchbrötchen</c><c>1200</c><c>0</c><c>10 g</c><c>0 g</c><c>40 g</c><c>0 g</c><c>8 g</c><c>0 g</c><c>Referenzmenge für einen durchschnittlichen Erwachsen (8400 kJ/2000 kcal)</c><c></c></row>
+	<row id="3"><c>Wrap Knusperpute Salsa</c><c>Putenschnitzel (70g/33%): Putenbrustfilet (60%), Weizenmehl, Rapsöl, Stärke, Maltodextrin, jodiertes Speisesalz, Reisgrieß, Dextrose, Glukosesirup, Gewürze, Hefe; Tortilla (46g/22%):Weizenmehl (63%), Wasser, ungehärtetes Palmfett, Stabilisatoren: E422, E466, E412; Weizengluten, Backtriebmittel: E450, E500; Glukose (aus Weizen), Salz, Emulgator: E471, Säureregulator: E296; Konservierungsstoff: E282, E202; Weizenfasern, Mehlbehandlungsmittel: E920; Mischsalat (40g/19%): Endivien, Radicchio, Weißkraut, Karotten; Tomate (21g/10%); Gurke (15g/7%); Salsasoße (15g/7%): Tomaten- saft, Zucker, Branntweinessig, rote u. grüne Paprikaschoten (7,5%), Tomaten, Zwiebeln, modifizierte Stärke, Speisesalz, Tomatenmark, Chilies (1,6%), Knoblauchpulver, Xanthan, Jalapeno-Paprika (0,2%), Rote Beete-Pulver, Gewürze, Aroma, karamelisierter Zucker, Maltodextrin; Frischkäse- zubereitung (5g/2%): Speisequark Magerstufe, Butter (Sahne), Molkenerzeugnis, Speisesalz, Verdickungsmittel (E407, E410)</c><c>8</c><c></c><c>219 g</c><c></c><c>kann Spuren von Milch, Weizen, enthalten</c><c>BackWerk Kamen, Inh. Jochen Müller, Weststr. 16, 59174 Kamen</c><c>7</c><c>60018</c><c>Wrap Thunfisch o. Knusperpute</c><c>674</c><c>161</c><c>5.8 g</c><c>1.4 g</c><c>19.5 g</c><c>2.9 g</c><c>7.2 g</c><c>2.2 g</c><c>Referenzmenge für einen durchschnittlichen Erwachsen (8400 kJ/2000 kcal)</c><c>Bei max. +7°C lagern</c></row>
+	<row id="4"><c>1/2 Paderborner</c><c>Roggenmehl, Natursauerteig (Roggenmehl, Wasser), Weizenmehl, Wasser, Hefe, Salz, Weizeneiweiß.</c><c>1</c><c></c><c>500 g</c><c></c><c></c><c>BackWerk Kamen, Inh. Jochen Müller, Weststr. 16, 59174 Kamen</c><c>7</c><c>61390</c><c>1/2 Paderborner</c><c>0</c><c>0</c><c>0 g</c><c>0 g</c><c>0 g</c><c>0 g</c><c>0 g</c><c>0 g</c><c>Referenzmenge für einen durchschnittlichen Erwachsen (8400 kJ/2000 kcal)</c><c></c></row></table>

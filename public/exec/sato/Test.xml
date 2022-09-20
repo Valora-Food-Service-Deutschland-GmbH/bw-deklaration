@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<table name="Grab" selectable="false" timestamp="">
+  <column name="Artikelbezeichnung" format="%s" />
+  <column name="Zutaten" format="%s" />
+  <column name="MHD" format="%f" />
+  <column name="Grundpreis" format="%s" />
+  <column name="Gewicht" format="%s" />
+  <column name="Preis" format="%s" />
+  <column name="Spuren" format="%s" />
+  <column name="Anschrift" format="%s" />
+  <column name="BW-ID" format="%f" />
+  <column name="Artikelnummer" format="%f" />
+  <column name="Artikelbezeichnung BW" format="%s" />
+  <column name="B-Wert Kcal" format="%s" />
+  <column name="B-Wert KJ" format="%f" />
+  <column name="Fett" format="%s" />
+  <column name="Fettsäuren" format="%s" />
+  <column name="K-Hydrate" format="%s" />
+  <column name="Zucker" format="%s" />
+  <column name="Eiweiss" format="%s" />
+  <column name="Salz" format="%s" />
+  <column name="Referenzmenge" format="%s" />
+  <column name="Lagerung" format="%s" />
+  <row id="1"><c>4 Berliner</c><c>WEIZENmehl, Mehrfruchtfüllung* (Zucker, Früchte (Erdbeeren, Kirschen, Himbeeren, Äpfel), Glucosesirup, Wasser, Geliermittel E440, Säuerungsmittel E330), Frittierfett (Palm), FLÜSSIGEI, Wasser, Dekorzucker* (Dextrose, WEIZENstärke, pflanzliches Fett gehärtet (Palm), Aroma), Hefe, pflanzliches Öl (Raps), Zucker, SÜßMOLKENpulver, Emulgator E471 (pflanzlich), LAKTOSE, Salz, Aroma.</c><c>0</c><c>€ /100 g</c><c>0 g</c><c>€ 1.99</c><c></c><c>BackWerk Düsseldorf Pempelfort, Inh. Axel Franzen, Nordstr. 49, 40477 Düsseldorf</c><c>1</c><c>10284</c><c>4 Berliner</c><c>0</c><c>0</c><c>0 g</c><c>0 g</c><c>0 g</c><c>0 g</c><c>0 g</c><c>0 g</c><c>Referenzmenge für einen durchschnittlichen Erwachsen (8400 kJ/2000 kcal)</c><c></c></row>
+  <row id="2"><c>Angebot 5 Quarkbällchen</c><c>Wasser, WEIZENmehl, MAGERQUARK (15%), WEIZENquellmehl, HÜHNEREIpulver, Zucker, pflanzliches Fett gehärtet, pflanzliche Öle gehärtet (Palmöl, SOJA, Sonnenblumenöl), Glukosesirup, Emulgatoren E472b, E475; Backtriebmittel E500, E450; Salz, Verdickungsmittel E412.</c><c>0</c><c>€ 6.63/100 g</c><c>30 g</c><c>€ 1.99</c><c>kann Spuren von Eier, Milch, Weizen, enthalten</c><c>BackWerk Düsseldorf Pempelfort, Inh. Axel Franzen, Nordstr. 49, 40477 Düsseldorf</c><c>1</c><c>10318</c><c>Angebot 5 Quarkbällchen</c><c>256</c><c>1076</c><c>9.5 g</c><c>4.7 g</c><c>35 g</c><c>11.6 g</c><c>7 g</c><c>1 g</c><c>Referenzmenge für einen durchschnittlichen Erwachsen (8400 kJ/2000 kcal)</c><c></c></row>
+</table>
