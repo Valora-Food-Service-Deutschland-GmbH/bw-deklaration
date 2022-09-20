@@ -138,6 +138,35 @@ class ArtikelController extends Controller
 
     }
 
+    public function download_FX3()
+    {
+
+        $client = Onedrive::client(
+            env('AZURE_CLIENT_ID', ''),
+            [
+                // Restore the previous state while instantiating this client to proceed
+                // in obtaining an access token.
+                'state' => $_SESSION['onedrive.client.state'],
+            ]
+        );
+
+        // Obtain the token using the code received by the OneDrive API.
+        $client->obtainAccessToken(env('AZURE_CLIENT_SECRET', ''), $_GET['code']);
+
+        // Persist the OneDrive client' state for next API requests.
+        $_SESSION['onedrive.client.state'] = $client->getState();
+
+        // Past this point, you can start using file/folder functions from the SDK, eg:
+        $file = $client->getRoot()->upload('hello.txt', 'Hello World!');
+        echo $file->download();
+        // => Hello World!
+
+        $file->delete();
+
+        return view('artikel.index');
+
+    }
+
     public function makelabel()
     {
 
