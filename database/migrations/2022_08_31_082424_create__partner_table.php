@@ -14,9 +14,12 @@ class CreatePartnerTable extends Migration
     public function up()
     {
         Schema::create('_partner', function (Blueprint $table) {
-            $table->collation('latin1_german1_ci');
             $table->id();
             $table->timestamps();
+            $table->string('Firstname');
+            $table->string('Givenname');
+            $table->string('Displayname');
+            $table->integer('partner_id');
         });
     }
 
