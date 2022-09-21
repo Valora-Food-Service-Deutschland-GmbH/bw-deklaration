@@ -28,9 +28,9 @@ class CreateArtikelTable extends Migration
             $table->integer('article_id')->nullable('true')->default(NULL);
             $table->integer('partner_id')->nullable('true')->default(NULL);
             $table->integer('store_id')->nullable('true')->default(NULL);
-            $table->integer('burn_kj')->nullable('true')->default(NULL);
-            $table->integer('burn_kcal')->nullable('true')->default(NULL);
-            $table->integer('weight')->nullable('true')->default(NULL);
+            $table->string('burn_kj')->nullable('true')->default(NULL);
+            $table->string('burn_kcal')->nullable('true')->default(NULL);
+            $table->string('weight')->nullable('true')->default(NULL);
             $table->timestamps();
         });
     }
