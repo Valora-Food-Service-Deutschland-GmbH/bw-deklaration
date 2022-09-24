@@ -30,7 +30,7 @@ class ArtikelController extends Controller
 
         $stores = []; #Hastable initialisieren
 
-        foreach (File::allFiles('../public/import/') as $file){ #Dateien aus Ordner laden und direkt in Loop schicken
+        foreach (File::allFiles(public_path('upload')) as $file){ #Dateien aus Ordner laden und direkt in Loop schicken
             $store_id = explode('_',$file->getFilename(),3)[0];
             $store = Store::where('store_id', $store_id)->first();
             $store_name = $store->store_name;
