@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Store extends Model
 {
-protected $table = '_stores';
+protected $table = '_store';
 }
