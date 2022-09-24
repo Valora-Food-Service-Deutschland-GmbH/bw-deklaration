@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\File;
 use Krizalys\Onedrive\Onedrive;
 use League\Csv\Reader;
 use Yajra\DataTables\DataTables;
-use Illuminate\Support\Facades\File;
 
 
 class ArtikelController extends Controller
