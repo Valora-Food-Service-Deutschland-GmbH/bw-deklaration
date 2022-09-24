@@ -4,6 +4,16 @@
     <div class="container">
 
         <h1>Artikel</h1>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Store auswahl
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                @foreach($stores as $store)
+                    <a class="dropdown-item" href="https://deklaration.valora.shop/artikel/{{$store('id')}}">{{$store('id')}} - {{$store('name')}}</a>
+                @endforeach
+            </div>
+        </div>
 
     </div>
 
