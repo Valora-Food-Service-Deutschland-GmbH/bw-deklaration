@@ -31,6 +31,8 @@ class AppAzure extends Azure
 
         Auth::login($user, true);
 
+
+
         return parent::success($request, $access_token, $refresh_token, $profile);
         #return redirect()->route('dashboard', [$request, $access_token, $refresh_token, $profile]);
     }
