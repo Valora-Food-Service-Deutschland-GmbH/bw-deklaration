@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artikel;
+use App\Models\Store;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Krizalys\Onedrive\Onedrive;
+use League\Csv\Reader;
 use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\File;
 
-#use yajra\Datatables\Facades\Datatables;
 
 class ArtikelController extends Controller
 {
@@ -25,21 +28,38 @@ class ArtikelController extends Controller
      */
     public function index(Request $request)
     {
-        return view('Artikel.index');
+
+        $stores = []; #Hastable initialisieren
+
+        foreach (File::allFiles('../public/import/') as $file){ #Dateien aus Ordner laden und direkt in Loop schicken
+            $store_id = explode('_',$file->getFilename(),3)[0];
+            $store = Store::where('store_id', $store_id)->first();
+            $store_name = $store->store_name;
+
+            $stores[] = array(
+                "id" => $store_id,  #Store ID rausziehen und speichern
+                "name" => $store_name,
+            );
+
+
+
+        }
+
+        return view('Artikel.index')->with('stores', $stores);
 
     }
 
     public function ajax()
     {
-            $All_Artikel= Artikel::select('*');
-            $dt = Datatables::of($All_Artikel)
-                ->make(true);
-            if (!$dt->isEmpty()) {
-                return $dt;
-            }
-            else{
-                return view('dashoard')->with($All_Artikel);
-            }
+        $All_Artikel= Artikel::select('*');
+        $dt = Datatables::of($All_Artikel)
+            ->make(true);
+        if (!$dt->isEmpty()) {
+            return $dt;
+        }
+        else{
+            return view('dashoard')->with($All_Artikel);
+        }
 
     }
 
