@@ -26,14 +26,14 @@ Route::group(['middleware' => ['web', 'guest'], 'namespace' => 'App\Http\Control
     Route::get('connect', 'AuthController@connect')->name('connect');
 });
 
-Route::group(['middleware' => ['web', 'MsGraphAuthenticated'], 'namespace' => 'App\Http\Controllers'], function(){
+Route::group(['middleware' => ['web', 'MsGraphAuthenticated']], function(){
     Route::redirect('/', 'dashboard');
     Route::get('logout', 'Auth\AuthController@logout')->name('logout');
 
     Route::get('/dashboard', function () {
         $me = MsGraph::get('me');
         return view('dashboard')->with('me', $me);
-    });
+    })->name('dashboard');
 
     Route::get('artikel', '\App\Http\Controllers\ArtikelController@index')
         ->name('artikel.index');
