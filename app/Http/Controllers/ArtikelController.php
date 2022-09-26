@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\AppAzure;
 use App\Models\Artikel;
 use App\Models\Store;
 use App\Models\Partner;
@@ -48,7 +49,30 @@ class ArtikelController extends Controller
 
     }
 
-    public function ajax($store_id)
+    public function ajax()
+    {
+
+        $Artikel_DB = Artikel::where('store_id', '=', $store_id)->first();
+        $filepath = public_path('import');
+        $basename = "_Deklaration_LMIV.csv";
+        $fullpath = $filepath . $store_id . $basename;
+
+        $Artikel_CSV = Reader::createFromPath($fullpath);
+
+
+
+        $dt = Datatables::of($All_Artikel)
+            ->make(true);
+        if (!$dt->isEmpty()) {
+            return $dt;
+        }
+        else{
+            return view('dashoard')->with($All_Artikel);
+        }
+
+    }
+
+    public function getajax($store_id)
     {
 
         $Artikel_DB = Artikel::where('store_id', '=', $store_id);

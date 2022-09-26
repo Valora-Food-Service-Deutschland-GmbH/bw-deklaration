@@ -32,9 +32,7 @@ Route::get('/logout/azure', '\App\Http\Middleware\AppAzure@azurelogout')
 Route::redirect('/', '/bla');
 
 Route::get('/dashboard', function (Request $request) {
-    $stuff = $request->all();
-
-    return view('dashboard', ['profile' => $stuff]);
+    return view('dashboard');
 });
 
 
@@ -43,6 +41,9 @@ Route::get('/artikel', '\App\Http\Controllers\ArtikelController@index')
 
 Route::get('/artikel/ajax', '\App\Http\Controllers\ArtikelController@ajax')
     ->name('artikel.ajax');
+
+Route::get('/artikel/getajax/{id}', '\App\Http\Controllers\ArtikelController@ajax')
+    ->name('artikel.getajax');
 
 Route::get('/artikel/download', '\App\Http\Controllers\ArtikelController@download')
     ->name('artikel.download');
