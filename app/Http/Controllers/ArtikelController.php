@@ -22,7 +22,7 @@ class ArtikelController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('AppAzure');
+        $this->middleware('azure');
     }
 
     /**

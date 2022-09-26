@@ -29,7 +29,7 @@ Route::get('/logout/azure', '\App\Http\Middleware\AppAzure@azurelogout')
     ->name('azure.logout');
 
 
-Route::redirect('/', '/bla');
+Route::redirect('/', '/dashboard');
 
 Route::get('/dashboard', function (Request $request) {
     return view('dashboard');
