@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\Artikel;
 use App\Models\Store;
-use App\Http\Controllers\Controller;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Krizalys\Onedrive\Onedrive;
@@ -27,22 +28,18 @@ class ArtikelController extends Controller
      */
     public function index(Request $request)
     {
-
-        $stores = []; #Hastable initialisieren
-
-        foreach (File::allFiles(public_path('upload')) as $file){ #Dateien aus Ordner laden und direkt in Loop schicken
-            $store_id = explode('_',$file->getFilename(),3)[0];
-            $store = Store::where('store_id', $store_id)->firstorFail();
-            $store_name = $store->store_name;
-
-            $stores[] = array(
-                "id" => $store_id,  #Store ID rausziehen und speichern
-                "name" => $store_name,
-            );
+        #$user_id = Auth::id();
+        #$user = User::findorFail($user_id);
+        #$partner = $user->partner->get();
+        #if ($partner->partner_id == 0){
+        #    $stores = $stores::all();
+        #}
+        #else{
+        #    #$stores = $partner->stores->get();
+        #}
 
 
-
-        }
+        $stores = $stores::all();
 
         return view('Artikel.index')->with('stores', $stores);
 

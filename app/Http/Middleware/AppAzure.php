@@ -23,10 +23,11 @@ class AppAzure extends Azure
             ->setReturnType(Model\User::class)
             ->execute();
 
-
         $email = strtolower($graph_user->getUserPrincipalName());
+        $partner = Partner::where('email', $mail);
         $user = User::updateOrCreate(['email' => $email], [
             'name' => $graph_user->getGivenName() . ' ' . $graph_user->getSurname(),
+            'partner_id' => $partner->partner_id,
         ]);
 
         Auth::login($user, true);

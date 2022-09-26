@@ -44,6 +44,6 @@ class User extends Authenticatable
 
     public function partner()
     {
-        return $this->hasOne(Partner::class,'email', 'email');
+        return $this->hasOne(Partner::class,'partner_id', 'partner_id');
     }
 }
