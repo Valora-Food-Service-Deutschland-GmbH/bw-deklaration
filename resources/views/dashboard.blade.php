@@ -9,7 +9,7 @@
         @endunless
 
             {{$me = MsGraph::get('me')}}
-        {{$me->displayName;}}
+        {{$me->displayName}}
 
     </div>
 @endsection
