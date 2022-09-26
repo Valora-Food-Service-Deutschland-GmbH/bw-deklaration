@@ -19,7 +19,10 @@ class ArtikelController extends Controller
      * Methods for Article Views
      *
      */
-
+    public function __construct()
+    {
+        $this->middleware('AppAzure');
+    }
 
     /**
      * Display a listing of the resource.
@@ -39,15 +42,24 @@ class ArtikelController extends Controller
         #}
 
 
-        $stores = Stores::all();
+        $stores = Store::all();
 
         return view('Artikel.index')->with('stores', $stores);
 
     }
 
-    public function ajax()
+    public function ajax($store_id)
     {
-        $All_Artikel= Artikel::select('*');
+
+        $Artikel_DB = Artikel::where('store_id', '=', $store_id);
+        $filepath = public_path('import');
+        $basename = "_Deklaration_LMIV.csv";
+        $fullpath = $filepath . $store_id . $basename;
+
+        $Artikel_CSV = Reader::createFromPath($fullpath);
+
+
+
         $dt = Datatables::of($All_Artikel)
             ->make(true);
         if (!$dt->isEmpty()) {
