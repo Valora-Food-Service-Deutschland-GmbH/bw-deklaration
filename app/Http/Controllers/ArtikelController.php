@@ -39,7 +39,7 @@ class ArtikelController extends Controller
         #}
 
 
-        $stores = $stores::all();
+        $stores = Stores::all();
 
         return view('Artikel.index')->with('stores', $stores);
 
