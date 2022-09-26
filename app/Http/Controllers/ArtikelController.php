@@ -20,10 +20,6 @@ class ArtikelController extends Controller
      * Methods for Article Views
      *
      */
-    public function __construct()
-    {
-        $this->middleware('azure');
-    }
 
     /**
      * Display a listing of the resource.
@@ -31,6 +27,25 @@ class ArtikelController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
+    {
+        #$user_id = Auth::id();
+        #$user = User::findorFail($user_id);
+        #$partner = $user->partner->get();
+        #if ($partner->partner_id == 0){
+        #    $stores = $stores::all();
+        #}
+        #else{
+        #    #$stores = $partner->stores->get();
+        #}
+
+
+        $stores = Store::all()->toArray();
+
+        return view('Artikel.index')->with('stores', $stores);
+
+    }
+
+    public function getarticle($id)
     {
         #$user_id = Auth::id();
         #$user = User::findorFail($user_id);

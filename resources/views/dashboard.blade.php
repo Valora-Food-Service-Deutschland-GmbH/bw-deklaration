@@ -8,9 +8,8 @@
             <p>You are not signed in.</p>
         @endunless
 
-        @isset($profile)
-            {{dd($profile)}}
-        @endisset
+            {{$me = MsGraph::get('me')}}
+        {{$me->displayName;}}
 
     </div>
 @endsection
