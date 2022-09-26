@@ -26,7 +26,7 @@ Route::group(['middleware' => ['web', 'guest'], 'namespace' => 'App\Http\Control
     Route::get('connect', 'AuthController@connect')->name('connect');
 });
 
-Route::group(['middleware' => ['web', 'MsGraphAuthenticated'], 'prefix' => 'app', 'namespace' => 'App\Http\Controllers'], function(){
+Route::group(['middleware' => ['web', 'MsGraphAuthenticated'], 'namespace' => 'App\Http\Controllers'], function(){
     Route::redirect('/', 'dashboard');
     Route::get('logout', 'Auth\AuthController@logout')->name('logout');
 
@@ -35,18 +35,18 @@ Route::group(['middleware' => ['web', 'MsGraphAuthenticated'], 'prefix' => 'app'
         return view('dashboard')->with('me', $me);
     });
 
-    Route::get('/artikel', '\App\Http\Controllers\ArtikelController@index')
+    Route::get('artikel', '\App\Http\Controllers\ArtikelController@index')
         ->name('artikel.index');
 
-    Route::get('/artikel/{id}', '\App\Http\Controllers\ArtikelController@getarticle')
+    Route::get('artikel/{id}', '\App\Http\Controllers\ArtikelController@getarticle')
         ->name('artikel.get');
 
-    Route::get('/artikel/ajax', '\App\Http\Controllers\ArtikelController@ajax')
+    Route::get('artikel/ajax', '\App\Http\Controllers\ArtikelController@ajax')
         ->name('artikel.ajax');
 
-    Route::get('/artikel/getajax/{id}', '\App\Http\Controllers\ArtikelController@getajax')
+    Route::get('artikel/getajax/{id}', '\App\Http\Controllers\ArtikelController@getajax')
         ->name('artikel.getajax');
 
-    Route::get('/artikel/download', '\App\Http\Controllers\ArtikelController@download')
+    Route::get('artikel/download', '\App\Http\Controllers\ArtikelController@download')
         ->name('artikel.download');
 });

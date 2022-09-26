@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Partner::class,'partner_id', 'partner_id');
     }
+
+    public function stores()
+    {
+        return $this->hasMany(Store::class,'partner_id', 'partner_id');
+    }
 }

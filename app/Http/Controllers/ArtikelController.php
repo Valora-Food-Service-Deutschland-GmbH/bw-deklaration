@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Http\Middleware\AppAzure;
 use App\Models\Artikel;
 use App\Models\Store;
 use App\Models\Partner;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Krizalys\Onedrive\Onedrive;
 use League\Csv\Reader;
 use Yajra\DataTables\DataTables;
+use Dcblogdev\MsGraph\Facades\MsGraph;
 
 
 class ArtikelController extends Controller
@@ -178,29 +178,13 @@ class ArtikelController extends Controller
 
     public function download()
     {
-
-        $client = Onedrive::client(
-            env('AZURE_CLIENT_ID', ''),
-            [
-                // Restore the previous state while instantiating this client to proceed
-                // in obtaining an access token.
-                'state' => $_SESSION['onedrive.client.state'],
-            ]
-        );
-
-        // Obtain the token using the code received by the OneDrive API.
-        $client->obtainAccessToken(env('AZURE_CLIENT_SECRET', ''), $_GET['code']);
-
-        // Persist the OneDrive client' state for next API requests.
-        $_SESSION['onedrive.client.state'] = $client->getState();
-
-        // Past this point, you can start using file/folder functions from the SDK, eg:
-        $file = $client->getRoot()->upload('hello.txt', 'Hello World!');
-        echo $file->download();
-        // => Hello World!
-
-        $file->delete();
-
+        $user = Auth::user();
+        $stores = Stores::where('partner_id', '=', $user->partner_id);
+        MsGraph::files()->createFolder('Sato', $path = '\Dokumente');
+        foreach ($stores as $store){
+            MsGraph::files()->createFolder($store->store_name, $path = '\Dokumente\Sato\/');
+        }
+        #MsGraph::files()->upload($name, $uploadPath, $path = '\Dokumente');
         return view('artikel.index');
 
     }
