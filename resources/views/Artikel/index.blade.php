@@ -10,7 +10,7 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 @foreach($stores as $store)
-                    <a class="dropdown-item" href="https://deklaration.valora.shop/artikel/{{$store('id')}}">{{$store('id')}} - {{$store('name')}}</a>
+                    <a class="dropdown-item" href="https://deklaration.valora.shop/artikel/{{$store->id}}">{{$store->id}} - {{$store->name}}</a>
                 @endforeach
             </div>
         </div>
