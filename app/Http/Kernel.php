@@ -2,6 +2,8 @@
 
 namespace App\Http;
 
+use Dcblogdev\MsGraph\MsGraphAdminAuthenticated;
+use Dcblogdev\MsGraph\MsGraphAuthenticated;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -64,5 +66,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'azure' => \App\Http\Middleware\AppAzure::class,
+        'MsGraphAuthenticated' => MsGraphAuthenticated::class,
+        'MsGraphAdminAuthenticated' => MsGraphAdminAuthenticated::class
     ];
 }
