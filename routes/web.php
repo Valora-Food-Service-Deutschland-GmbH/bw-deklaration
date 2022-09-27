@@ -26,7 +26,7 @@ Route::group(['middleware' => ['web', 'guest'], 'namespace' => 'App\Http\Control
     Route::get('connect', 'AuthController@connect')->name('connect');
 });
 
-Route::group(['middleware' => ['web', 'MsGraphAuthenticated']], function(){
+Route::group(['middleware' => ['MsGraphAuthenticated']], function(){
     Route::redirect('/', 'dashboard');
     Route::get('logout', 'Auth\AuthController@logout')->name('logout');
 
