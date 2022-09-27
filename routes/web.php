@@ -28,7 +28,7 @@ Route::group(['middleware' => ['web', 'guest'], 'namespace' => 'App\Http\Control
 
 Route::group(['middleware' => ['MsGraphAuthenticated']], function(){
     Route::redirect('/', 'dashboard');
-    Route::get('logout', 'Auth\AuthController@logout')->name('logout');
+    #Route::get('logout', 'Auth\AuthController@logout')->name('logout');
 
     Route::get('/dashboard', function () {
         $me = MsGraph::get('me');
