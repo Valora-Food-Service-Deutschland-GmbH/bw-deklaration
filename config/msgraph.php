@@ -6,24 +6,24 @@ return [
     * the clientId is set from the Microsoft portal to identify the application
     * https://apps.dev.microsoft.com
     */
-    'clientId' => env('AZURE_CLIENT_ID'),
+    'clientId' => env('MSGRAPH_CLIENT_ID'),
 
     /*
     * set the application secret
     */
 
-    'clientSecret' => env('AZURE_CLIENT_SECRET'),
+    'clientSecret' => env('MSGRAPH_SECRET_ID'),
 
     /*
     * Set the url to trigger the oauth process this url should call return MsGraph::connect();
     */
-    'redirectUri' => env('https://deklaration.valora.shop/connect'),
+    'redirectUri' => env('MSGRAPH_OAUTH_URL'),
 
     /*
     * set the url to be redirected to once the token has been saved
     */
 
-    'msgraphLandingUri'  => env('https://deklaration.valora.shop/dashboard'),
+    'msgraphLandingUri'  => env('MSGRAPH_LANDING_URL'),
 
     /*
     set the tenant authorize url
@@ -39,18 +39,18 @@ return [
     /*
     set the authorize url
     */
-    'urlAuthorize' => 'https://login.microsoftonline.com/'.env('AZURE_TENANT_ID', 'common').'/oauth2/v2.0/authorize',
+    'urlAuthorize' => 'https://login.microsoftonline.com/'.env('MSGRAPH_TENANT_ID', 'common').'/oauth2/v2.0/authorize',
 
     /*
     set the token url
     */
-    'urlAccessToken' => 'https://login.microsoftonline.com/'.env('AZURE_TENANT_ID', 'common').'/oauth2/v2.0/token',
+    'urlAccessToken' => 'https://login.microsoftonline.com/'.env('MSGRAPH_TENANT_ID', 'common').'/oauth2/v2.0/token',
 
     /*
     set the scopes to be used, Microsoft Graph API will accept up to 20 scopes
     */
 
-    'scopes' => 'offline_access openid files.readwrite user.readwrite',
+    'scopes' => 'offline_access openid calendars.readwrite contacts.readwrite files.readwrite mail.readwrite mail.send tasks.readwrite mailboxsettings.readwrite user.readwrite',
 
     /*
     The default timezone is set to Europe/London this option allows you to set your prefered timetime
