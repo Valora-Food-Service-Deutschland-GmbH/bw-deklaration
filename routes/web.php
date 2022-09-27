@@ -20,6 +20,7 @@ use Illuminate\Http\Request;
 /**
  * Azure Login Routes
  */
+Route::redirect('/', 'login');
 
 Route::group(['middleware' => ['web', 'guest'], 'namespace' => 'App\Http\Controllers\Auth'], function(){
     Route::get('login', 'AuthController@login')->name('login');
@@ -27,7 +28,7 @@ Route::group(['middleware' => ['web', 'guest'], 'namespace' => 'App\Http\Control
 });
 
 Route::group(['middleware' => ['MsGraphAuthenticated']], function(){
-    Route::redirect('/', 'dashboard');
+
     #Route::get('logout', 'Auth\AuthController@logout')->name('logout');
 
     Route::get('/dashboard', function () {
